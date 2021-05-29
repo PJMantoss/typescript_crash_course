@@ -1,4 +1,6 @@
-const inputName = document.querySelector('#name') as HTMLInputElement;
+const inputName = document.querySelector('#name') as HTMLInputElement //typecasting;
+const inputAge = document.querySelector('#age');
+
 
 inputName.value
 
