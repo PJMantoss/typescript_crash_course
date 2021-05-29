@@ -21,18 +21,37 @@ inputForm.addEventListener('submit', function (e) {
     inputForm.reset();
 });
 //Generics
-function doSomething(arg) {
-    //do something. <T> is a placeholder
-    return arg;
-}
-doSomething('5');
-var aBook = {
-    id: 1,
-    name: 'Title 1',
-    data: '1'
+// function doSomething<T>(arg: T): T {
+//     //do something. <T> is a placeholder
+//     return arg;
+// }
+// doSomething('5');
+// interface book<T> {
+//     id: number;
+//     name: string;
+//     data: T
+// }
+// const aBook: book<string> = {
+//     id: 1,
+//     name: 'Title 1',
+//     data: '1'
+// }
+// const bBook: book<string[]> = {
+//     id: 2,
+//     name: 'Title 2',
+//     data: ["Review 1", "Review 2"]
+// }
+//Enums: ways to assign descriptive words to a numeric values
+var manufacturerMake;
+(function (manufacturerMake) {
+    manufacturerMake[manufacturerMake["Tesla"] = 0] = "Tesla";
+    manufacturerMake[manufacturerMake["Audi"] = 1] = "Audi";
+    manufacturerMake[manufacturerMake["Mercedes"] = 2] = "Mercedes";
+    manufacturerMake[manufacturerMake["Volvo"] = 3] = "Volvo";
+    manufacturerMake[manufacturerMake["BMW"] = 4] = "BMW";
+})(manufacturerMake || (manufacturerMake = {}));
+var myCar = {
+    year: 2021,
+    make: manufacturerMake.Volvo
 };
-var bBook = {
-    id: 2,
-    name: 'Title 2',
-    data: ["Review 1", "Review 2"]
-};
+console.log(myCar.make);

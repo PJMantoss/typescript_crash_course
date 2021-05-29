@@ -27,27 +27,37 @@ inputForm.addEventListener('submit', (e) => {
 })
 
 //Generics
-function doSomething<T>(arg: T): T {
-    //do something. <T> is a placeholder
-    return arg;
+// function doSomething<T>(arg: T): T {
+//     //do something. <T> is a placeholder
+//     return arg;
+// }
+
+// doSomething('5');
+
+// interface book<T> {
+//     id: number;
+//     name: string;
+//     data: T
+// }
+
+// const aBook: book<string> = {
+//     id: 1,
+//     name: 'Title 1',
+//     data: '1'
+// }
+
+// const bBook: book<string[]> = {
+//     id: 2,
+//     name: 'Title 2',
+//     data: ["Review 1", "Review 2"]
+// }
+
+//Enums: ways to assign descriptive words to a numeric values
+enum manufacturerMake { Tesla, Audi, Mercedes, Volvo, BMW }
+
+const myCar = {
+    year: 2021,
+    make: manufacturerMake.Volvo
 }
 
-doSomething('5');
-
-interface book<T> {
-    id: number;
-    name: string;
-    data: T
-}
-
-const aBook: book<string> = {
-    id: 1,
-    name: 'Title 1',
-    data: '1'
-}
-
-const bBook: book<string[]> = {
-    id: 2,
-    name: 'Title 2',
-    data: ["Review 1", "Review 2"]
-}
+console.log(myCar.make);
