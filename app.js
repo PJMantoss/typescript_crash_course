@@ -1,4 +1,8 @@
 "use strict";
+var inputName = document.querySelector('#name'); //typecasting
+var inputAge = document.querySelector('#age');
+var inputForm = document.querySelector('form'); //! tells typescript form is not null
+var greeting = document.querySelector('.greeting');
 var Person = /** @class */ (function () {
     function Person(name, age) {
         this.name = name;
@@ -10,5 +14,9 @@ var Person = /** @class */ (function () {
     ;
     return Person;
 }());
-var mantoss = new Person("Mantoss", 35);
-console.log(mantoss.greet());
+inputForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var person = new Person(inputName.value, inputAge.valueAsNumber);
+    greeting.innerText = person.greet();
+    inputForm.reset();
+});
