@@ -1,6 +1,6 @@
-const inputName = document.querySelector('#name') as HTMLInputElement //typecasting;
-const inputAge = document.querySelector('#age');
-const inputForm = document.querySelector('form')
+const inputName = document.querySelector('#name') as HTMLInputElement; //typecasting
+const inputAge = document.querySelector('#age') as HTMLInputElement;
+const inputForm = document.querySelector('form');
 
 interface PersonInterface {
     name: string;
