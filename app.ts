@@ -7,7 +7,11 @@ interface PersonInterface {
 class Person implements PersonInterface {
     constructor (public name: string, public age: number){}
 
-    greet();
+    greet(){
+        return `Hi! my name is ${this.name} and I am ${this.age}`
+    };
 }
+
+let mantoss = new Person("Mantoss", 35);
 
 console.log("hi");
