@@ -1,6 +1,6 @@
 const inputName = document.querySelector('#name') as HTMLInputElement; //typecasting
 const inputAge = document.querySelector('#age') as HTMLInputElement;
-const inputForm = document.querySelector('form');
+const inputForm = document.querySelector('form')!; //! tells typescript form is not null
 const greeting = document.querySelector('.greeting');
 
 interface PersonInterface {
