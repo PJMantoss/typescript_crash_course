@@ -20,3 +20,19 @@ inputForm.addEventListener('submit', function (e) {
     greeting.innerText = person.greet();
     inputForm.reset();
 });
+//Generics
+function doSomething(arg) {
+    //do something. <T> is a placeholder
+    return arg;
+}
+doSomething('5');
+var aBook = {
+    id: 1,
+    name: 'Title 1',
+    data: '1'
+};
+var bBook = {
+    id: 2,
+    name: 'Title 2',
+    data: ["Review 1", "Review 2"]
+};

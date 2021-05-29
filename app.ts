@@ -25,3 +25,29 @@ inputForm.addEventListener('submit', (e) => {
 
     inputForm.reset();
 })
+
+//Generics
+function doSomething<T>(arg: T): T {
+    //do something. <T> is a placeholder
+    return arg;
+}
+
+doSomething('5');
+
+interface book<T> {
+    id: number;
+    name: string;
+    data: T
+}
+
+const aBook: book<string> = {
+    id: 1,
+    name: 'Title 1',
+    data: '1'
+}
+
+const bBook: book<string[]> = {
+    id: 2,
+    name: 'Title 2',
+    data: ["Review 1", "Review 2"]
+}
