@@ -22,4 +22,6 @@ inputForm.addEventListener('submit', (e) => {
     const person = new Person(inputName.value, inputAge.valueAsNumber);
 
     greeting.innerText = person.greet();
+
+    inputForm.reset();
 })
