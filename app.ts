@@ -14,4 +14,4 @@ class Person implements PersonInterface {
 
 let mantoss = new Person("Mantoss", 35);
 
-console.log("hi");
+console.log(mantoss.greet());
