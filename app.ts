@@ -16,6 +16,8 @@ class Person implements PersonInterface {
     };
 }
 
+inputForm.addEventListener('submit', () => {})
+
 let mantoss = new Person("Mantoss", 35);
 
 console.log(mantoss.greet());
